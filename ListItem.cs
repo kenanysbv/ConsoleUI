@@ -6,8 +6,8 @@
         public List<Element> Values { get; set; }
 
 
-        public ListItem(string name, Location location, string text, string value) : base(name, location, text, value) { }
-        public ListItem(List<Element> values, string name, Location location, string text, string value) : base(name, location, text, value)
+        public ListItem(string name, Location location, string text, string value) : base(name, location) { }
+        public ListItem(List<Element> values, string name, Location location, string text, string value) : base(name, location)
         {
             Values = values;
         }
