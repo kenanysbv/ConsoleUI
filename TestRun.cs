@@ -12,12 +12,14 @@ namespace ConsoleUI
         public static void Main(string[] args)
         {
             #region Test Label
+
             /* With Location Manual */
 
             //Label l = new Label("Test Lbl", new Location(3,23), "Test Tex", "Test Value");
             //l.Run();
             //Console.WriteLine();
             //l.ShowInfo();
+
 
             /* With Location Enum*/
 
@@ -29,6 +31,21 @@ namespace ConsoleUI
 
 
             #endregion
+
+            #region Test Button
+
+            //Button btn = new Button("TestBtn-1", new Location(Location.Locations.Center), "OKKKKK");
+            //btn.Run();
+            //Console.WriteLine();
+            //btn.Clicked = true;
+            //btn.ShowInfo();
+            //Console.Clear();
+            //btn.Run();
+
+            #endregion
+
+
+
 
         }
     }
