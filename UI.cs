@@ -16,9 +16,9 @@ namespace ConsoleUI
         public virtual void Run() { }
         public virtual void ShowInfo() { }
 
-        public virtual void UptodateLocation() { }
+        public virtual void UpdateLocation() { }
 
-        static public int FindCenterText(int space, int txtLen) => (txtLen / 2) < space ? space - (txtLen / 2) : 0;
+        static public int FindCenterText(int space, int txtLen) => txtLen <= ((int)ConsoleSize.Width - space) ? space - (txtLen / 2) : (int)ConsoleSize.Width - txtLen;
 
     }
 }

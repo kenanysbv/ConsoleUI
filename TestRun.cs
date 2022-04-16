@@ -23,8 +23,8 @@ namespace ConsoleUI
 
             /* With Location Enum*/
 
-            //Label l = new Label("Test Lbl",new Location(Location.Locations.Bottom) , "Test Tex", "Test Vasdsasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaasdasdasdadasdasdasdaalue");
-            //l.AutoCenter = false;
+            //Label l = new Label("Test Lbl", new Location(Location.Locations.Bottom), "Test Tex", "Test Vasdsasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaasdasdasdadasdasdasdaalue");
+            //l.AutoCenter = true;
             //l.Run();
             //Console.WriteLine();
             //l.ShowInfo();
@@ -44,8 +44,14 @@ namespace ConsoleUI
 
             #endregion
 
+            #region Test Input
 
+            Input inpt = new Input("TestInput-1", "WriteTestData: ", new Location(Location.Locations.TopRight), ConsoleColor.DarkCyan);
+            inpt.Selected = true;
+            inpt.Run();
+            inpt.ShowInfo();
 
+            #endregion
 
         }
     }

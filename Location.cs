@@ -8,10 +8,10 @@ using ConsoleUI;
 namespace ConsoleUI
 {
 
+    public enum ConsoleSize { Height = 30, Width = 118 }
 
     public class Location
     {
-        public enum ConsoleSize { Height = 30, Width = 118 }
         public enum Locations { Top, TopRight, TopLeft, Center, Left, Right, Bottom, BottomLeft, BottomRight }
         public enum LocationCase { Empty = -1 }
         public Location(int line, int space)

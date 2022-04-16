@@ -34,7 +34,7 @@ namespace ConsoleUI
         public override void Run()
         {
             if (AutoCenter)
-                UptodateLocation();
+                UpdateLocation();
             GoToLocation();
             Console.ForegroundColor = Clicked ? TextHoverColor : TextColor;
             Console.Write($"{Text} ");
@@ -49,12 +49,7 @@ namespace ConsoleUI
 
         }
 
-        public override void UptodateLocation()
-        {
-            this.Location.Space = UI.FindCenterText(Location.Space, Text.Length);
-
-        }
-
+        public override void UpdateLocation() => Location.Space = UI.FindCenterText(Location.Space, Text.Length);
 
     }
 }
