@@ -30,30 +30,7 @@ namespace ConsoleUI
             ValueColor = valueColor;
             ValueHoverColor = valueHoverColor;
         }
-        public Element(string name, Location.Locations location, string text, string value, ConsoleColor textColor, ConsoleColor textHoverColor, ConsoleColor valueColor, ConsoleColor valueHoverColor)
-        {
-            Name = name;
-            Location.LocationDefault = location;
-            Text = text;
-            Value = value;
-            TextColor = textColor;
-            TextHoverColor = textHoverColor;
-            ValueColor = valueColor;
-            ValueHoverColor = valueHoverColor;
-        }
 
-
-        public Element(string name, Location.Locations location, string text, string value, ConsoleColor textColor, ConsoleColor valueColor)
-        {
-            Name = name;
-            Location.LocationDefault = location;
-            Text = text;
-            Value = value;
-            TextColor = textColor;
-            ValueColor = valueColor;
-            TextHoverColor = TextColor;
-            ValueHoverColor = ValueColor;
-        }
         public Element(string name, Location location, string text, string value, ConsoleColor textColor, ConsoleColor valueColor)
         {
             Name = name;
@@ -66,7 +43,6 @@ namespace ConsoleUI
             ValueHoverColor = ValueColor;
         }
 
-
         public Element(string name, Location location, string text, string value)
         {
             Name = name;
@@ -74,17 +50,21 @@ namespace ConsoleUI
             Text = text;
             Value = value;
         }
-        public Element(string name, Location.Locations location, string text, string value)
+
+        public virtual void GoToLocation()
         {
-            Name = name;
-            Location.LocationDefault = location;
-            Text = text;
-            Value = value;
+            Location.GetLocationOnLocations();
+            for (int line = 1; line < Location.Line; line++)
+            {
+                Console.WriteLine();
+            }
+            for (int space = 1; space < Location.Space; space++)
+            {
+                Console.Write(" ");
+            }
         }
 
-
-        static public void Run() { }
-
+        public override void ShowInfo() => Console.WriteLine($"Name: {Name} ~~ CID: {CID} ~~ Location(line,space): {Location.Line}*{Location.Space}");
     }
 
 }

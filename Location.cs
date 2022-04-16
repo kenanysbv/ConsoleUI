@@ -22,7 +22,8 @@ namespace ConsoleUI
 
         public Location(Locations locationDefault)
         {
-            LocationDefault = locationDefault;
+            GetLocationOnLocations(locationDefault);
+
         }
 
         public Locations LocationDefault { get; set; }
@@ -32,6 +33,52 @@ namespace ConsoleUI
         public void GetLocationOnLocations(Locations loc)
         {
             switch (loc)
+            {
+                case Locations.Top:
+                    Line = 0;
+                    Space = 59;
+                    break;
+                case Locations.TopRight:
+                    Line = 0;
+                    Space = 118;
+                    break;
+                case Locations.TopLeft:
+                    Line = 0;
+                    Space = 0;
+                    break;
+                case Locations.Center:
+                    Line = (int)ConsoleSize.Height / 2;
+                    Space = (int)ConsoleSize.Width / 2;
+                    break;
+                case Locations.Left:
+                    Line = (int)ConsoleSize.Height / 2;
+                    Space = (int)ConsoleSize.Width;
+                    break;
+                case Locations.Right:
+                    Line = (int)ConsoleSize.Height / 2;
+                    Space = 0;
+                    break;
+                case Locations.Bottom:
+                    Line = (int)ConsoleSize.Height;
+                    Space = (int)ConsoleSize.Width / 2;
+                    break;
+                case Locations.BottomLeft:
+                    Line = (int)ConsoleSize.Height;
+                    Space = (int)ConsoleSize.Width;
+                    break;
+                case Locations.BottomRight:
+                    Line = (int)ConsoleSize.Height;
+                    Space = 0;
+                    break;
+                default:
+                    break;
+            }
+        }
+        public void GetLocationOnLocations()
+        {
+            if (Line != (int)LocationCase.Empty && Space != (int)LocationCase.Empty)
+                return;
+            switch (LocationDefault)
             {
                 case Locations.Top:
                     Line = 0;
