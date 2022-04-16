@@ -46,11 +46,20 @@ namespace ConsoleUI
 
             #region Test Input
 
-            Input inpt = new Input("TestInput-1", "WriteTestData: ", new Location(Location.Locations.TopRight), ConsoleColor.DarkCyan);
-            inpt.Selected = true;
-            inpt.Run();
-            inpt.ShowInfo();
+            //Input inpt = new Input("TestInput-1", "WriteTestData: ", new Location(Location.Locations.TopRight), ConsoleColor.DarkCyan);
+            //inpt.Selected = true;
+            //inpt.Run();
+            //inpt.ShowInfo();
 
+            #endregion
+
+            #region Test ListItem
+            ListItem listItem = new ListItem("TestName", new Location(Location.Locations.TopRight));
+            listItem.AddValue(new Label("LBL", new Location(Location.Locations.Left), "C#", "6"));
+            listItem.AddValue(new Label("LBL-2", new Location(Location.Locations.Left), "HelloWold!", "14"));
+            listItem.AddValue(new Label("LBL-2", new Location(Location.Locations.Left), "HelloWold!", "14"));
+            listItem.AddValue(new Label("LBL-4", new Location(Location.Locations.Left), "Hakuna", "19"));
+            listItem.ShowValues();
             #endregion
 
         }

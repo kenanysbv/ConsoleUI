@@ -20,5 +20,7 @@ namespace ConsoleUI
 
         static public int FindCenterText(int space, int txtLen) => txtLen <= ((int)ConsoleSize.Width - space) ? space - (txtLen / 2) : (int)ConsoleSize.Width - txtLen;
 
+        public override string ToString() => $"{CID}";
+
     }
 }
