@@ -81,6 +81,10 @@ namespace ConsoleUI
             Text = text;
             Value = value;
         }
+
+
+        static public void Run() { }
+
     }
 
 }
