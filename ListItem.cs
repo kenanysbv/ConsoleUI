@@ -3,11 +3,16 @@
 
     public class ListItem : Element
     {
-        public List<Element> Values { get; set; }
+        private List<Element> values = new List<Element>();
 
+        public List<Element> Values
+        {
+            get { return values; }
+            set { values = value; }
+        }
 
-        public ListItem(string name, Location location, string text, string value) : base(name, location) { }
-        public ListItem(List<Element> values, string name, Location location, string text, string value) : base(name, location)
+        public ListItem(string name, Location location) : base(name, location) { }
+        public ListItem(List<Element> values, string name, Location location) : base(name, location)
         {
             Values = values;
         }

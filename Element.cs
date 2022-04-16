@@ -34,6 +34,8 @@ namespace ConsoleUI
         }
 
         public override void ShowInfo() => Console.WriteLine($"Name: {Name} ~~ CID: {CID} ~~ Location(line,space): {Location.Line}*{Location.Space}");
+        public override string ToString() => $"Name: {Name} ~~~ CID: {CID}";
+
     }
 
 }

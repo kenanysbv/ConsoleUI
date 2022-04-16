@@ -53,5 +53,6 @@ namespace ConsoleUI
             Console.WriteLine($"Text: {Text}\nData: {Data} \nTextColor: {TextColor}");
 
         }
+
     }
 }

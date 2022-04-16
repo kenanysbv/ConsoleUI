@@ -51,7 +51,7 @@ namespace ConsoleUI
             Console.WriteLine($"Text: {Text} \nValue: {Value}\nTextColor: {TextColor}\nValueColor: {ValueColor}");
         }
 
-        public override void UpdateLocation() => Location.Space = UI.FindCenterText(Location.Space, (Text.Length + Value.Length));
+        public override void UpdateLocation() => Location.Space = UI.FindCenterText(Location.Space, Text.Length + Value.Length);
 
     }
 }
