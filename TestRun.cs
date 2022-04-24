@@ -42,6 +42,7 @@ namespace ConsoleUI
             //Console.Clear();
             //btn.Run();
 
+
             #endregion
 
             #region Test Input
@@ -53,13 +54,29 @@ namespace ConsoleUI
 
             #endregion
 
-            #region Test ListItem
-            ListItem listItem = new ListItem("TestName", new Location(Location.Locations.TopRight));
-            listItem.AddValue(new Label("LBL", new Location(Location.Locations.Left), "C#", "6"));
-            listItem.AddValue(new Label("LBL-2", new Location(Location.Locations.Left), "HelloWold!", "14"));
-            listItem.AddValue(new Label("LBL-2", new Location(Location.Locations.Left), "HelloWold!", "14"));
-            listItem.AddValue(new Label("LBL-4", new Location(Location.Locations.Left), "Hakuna", "19"));
+
+
+            #region Test ListItem Progrecs
+
+            //Label l = new Label("LBL-2", new Location(Location.Locations.Left), "HelloWold!", "14");
+            //ListItem listItem = new ListItem("TestName", new Location(Location.Locations.TopRight));
+            //listItem.AddValue(new Label("LBL", new Location(Location.Locations.Left), "C#", "6"));
+            //listItem.AddValue(l);
+            //listItem.AddValue(l);
+            //listItem.AddValue(new Label("LBL-3", new Location(Location.Locations.Left), "Hakuna", "19"));
+            //listItem.ShowValues();
+            //listItem.RemoveValue(l);
+            //Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
+            //listItem.ShowValues();
+
+            ListItem listItem = new("ListItemTest-1", new Location(Location.Locations.BottomRight));
+            listItem.AddValue("TestItem-1");
+            listItem.AddValue("TestItem-2");
+            listItem.AddValue("TestItem-3");
+            listItem.AddValue("TestItem-4");
+            listItem.AddValue("TestItem-1");
             listItem.ShowValues();
+
             #endregion
 
         }

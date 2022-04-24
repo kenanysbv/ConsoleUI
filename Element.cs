@@ -3,10 +3,9 @@
 namespace ConsoleUI
 {
 
-    public class Element : UI
+    public class Element : Base
     {
-
-        public string Name { get; set; }
+        public bool Visible { get; set; } = true;
 
         public Location Location { get; set; }
 
@@ -17,6 +16,7 @@ namespace ConsoleUI
         {
             Name = name;
             Location = location;
+            ID = Guid.NewGuid();
         }
 
 
@@ -33,9 +33,7 @@ namespace ConsoleUI
             }
         }
 
-        public override void ShowInfo() => Console.WriteLine($"Name: {Name} ~~ CID: {CID} ~~ Location(line,space): {Location.Line}*{Location.Space}");
-        public override string ToString() => $"Name: {Name} ~~~ CID: {CID}";
-
+        public override void ShowInfo() => Console.Write($"Name: {Name} ~~ CID: {CID} ~~ Location(line,space): {Location.Line}*{Location.Space}");
     }
 
 }

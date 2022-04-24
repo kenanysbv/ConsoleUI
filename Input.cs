@@ -7,7 +7,7 @@ using ConsoleUI;
 
 namespace ConsoleUI
 {
-    internal class Input : Element
+    public class Input : Element
     {
         public string? Data { get; set; } = null;
 
@@ -45,7 +45,7 @@ namespace ConsoleUI
             Console.ResetColor();
         }
 
-        public override void UpdateLocation() => Location.Space = UI.FindCenterText(Location.Space, Text.Length);
+        public override void UpdateLocation() => Location.Space = Base.FindCenterText(Location.Space, Text.Length);
 
         public override void ShowInfo()
         {
@@ -53,6 +53,5 @@ namespace ConsoleUI
             Console.WriteLine($"Text: {Text}\nData: {Data} \nTextColor: {TextColor}");
 
         }
-
     }
 }
